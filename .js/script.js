@@ -56,4 +56,20 @@ buttonNext.addEventListener('click', () => {
 
 renderPokemon(searchPokemon);
 
+//botao popup.
+
+const btnPopUp = document.getElementById('btnPopUp');
+const popup = document.getElementById('popup');
+const closePopupBtn = document.getElementById('closePopup');
+
+//adiciona um evento de click ao botao 'info'.
+btnPopUp.addEventListener('click', function() {
+  popup.style.display = 'block'; // Mostra o popup
+});
+
+closePopupBtn.addEventListener('click', function() {
+  popup.style.display = 'none'; // Esconde o popup
+});
+
+
 
