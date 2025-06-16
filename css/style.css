@@ -117,6 +117,26 @@ main {
     line-height: 1.5;
 }
 
+.popup-title {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid #aaa;
+}
+
+.info-row span:first-child {
+  color: #333;
+}
+
+
 .btnClose {
     width: 40%;
     padding: 4px;
@@ -134,4 +154,19 @@ main {
 .btnClose:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.8rem;
+}
+
+.logo{
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    right: 80%;
+}
+
+.ash {
+    width: 10%;
+    height: 30%;
+    position: absolute;
+    left: 80%;
+    margin-top: 35.5%;
 }

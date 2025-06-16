@@ -105,10 +105,11 @@ btnPopUp.addEventListener('click', function () {
       .map((h) => capitalizar(h.ability.name))
       .join(', ');
 
-    document.getElementById('info-tipo').innerText = `Tipo: ${tipos}`;
-    document.getElementById('info-altura').innerText = `Altura: ${altura} m`;
-    document.getElementById('info-peso').innerText = `Peso: ${peso} kg`;
-    document.getElementById('info-habilidade').innerText = `Habilidades: ${habilidades}`;
+    document.getElementById('info-tipo').innerText = tipos;
+    document.getElementById('info-altura').innerText = `${altura.toFixed(2)} m`;
+    document.getElementById('info-peso').innerText = `${peso.toFixed(1)} kg`;
+    document.getElementById('info-habilidade').innerText = habilidades;
+
 
     popup.style.display = 'block';
   }
@@ -119,6 +120,29 @@ btnPopUp.addEventListener('click', function () {
 closePopupBtn.addEventListener('click', function() {
   popup.style.display = 'none'; // Esconde o popup
 });
+
+const btnStats = document.getElementById('btnStats');
+const statsPopup = document.getElementById('statsPopup');
+const closeStats = document.getElementById('closeStats');
+
+btnStats.addEventListener('click', function() {
+  if (currentPokemonData) {
+    const stats = currentPokemonData.stats;
+    
+    document.getElementById('stat-hp').innerText = stats[0].base_stat;
+    document.getElementById('stat-attack').innerText = stats[1].base_stat;
+    document.getElementById('stat-defense').innerText = stats[2].base_stat;
+    document.getElementById('stat-sp-attack').innerText = stats[3].base_stat;
+    document.getElementById('stat-sp-defense').innerText = stats[4].base_stat;
+    document.getElementById('stat-speed').innerText = stats[5].base_stat;
+    statsPopup.style.display = 'block';
+  }
+});
+
+closeStats.addEventListener('click', function() {
+  statsPopup.style.display = 'none';
+});
+
 
 
 

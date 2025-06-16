@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <script  defer src="/.js/script.js"></script>
+
+    <title>Pokédex</title>
+</head>
+<body>
+    <div>
+        <img src="/imagens/logo-pokemon.png" alt="logo" class="logo"/>
+        <img src="/imagens/ash.png" alt="ash" class="ash"/>
+    </div>
+
+    <main>
+        <img src="#" alt="pokemon" class="pokemon__image">
+
+        <h1 class="pokemon__data">
+            <span class="pokemon__number">6</span> - 
+            <span class="pokemon__name">charizard</span>
+        </h1>
+
+        <form class="form">
+            <input
+             type="search"
+             class="input__search"
+             placeholder="Name or Number"
+             required
+             />
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">Prev &lt; </button>
+            <button class="button btn-next">Next &gt;</button>
+            <button class="button btn-info" id="btnPopUp"> Info </button>
+            <button class="button btn-stats" id="btnStats"> Stats</button>
+        </div>
+        <img src="/imagens/pokedex.png" alt="pokedex" class="pokedex">
+    </main>
+    <div class="Popup" id="popup">
+        <h1 class="popup-title"><strong>Informações do Pokémon:</strong></h1>
+
+        <div class="info-row">
+            <span><strong>Tipo:</strong></span>
+            <span id="info-tipo"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Altura:</strong></span>
+            <span id="info-altura"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Peso:</strong></span>
+            <span id="info-peso"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Habilidades:</strong></span>
+            <span id="info-habilidade"></span>
+        </div>
+
+        <button class="btnClose" id="closePopup">Fechar</button>
+    </div>
+
+
+    <div class="Popup" id="statsPopup">
+        <h1 class="popup-title"><strong>Status:</strong></h1>
+
+        <div class="info-row">
+            <span><strong>HP:</strong></span>
+            <span id="stat-hp"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Ataque:</strong></span>
+            <span id="stat-attack"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Defesa:</strong></span>
+            <span id="stat-defense"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Atk Esp.:</strong></span>
+            <span id="stat-sp-attack"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Def Esp.:</strong></span>
+            <span id="stat-sp-defense"></span>
+        </div>
+
+        <div class="info-row">
+            <span><strong>Velocidade:</strong></span>
+            <span id="stat-speed"></span>
+        </div>
+
+        <button class="btnClose" id="closeStats">Fechar</button>
+    </div>
+
+
+
+</body>
+</html>
