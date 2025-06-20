@@ -156,17 +156,30 @@ main {
     font-size: 0.8rem;
 }
 
-.logo{
-    width: 20%;
-    height: 30%;
-    position: absolute;
-    right: 80%;
+.layout-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
 }
 
+.logo,
 .ash {
-    width: 10%;
-    height: 30%;
-    position: absolute;
-    left: 80%;
-    margin-top: 35.5%;
+  width: 15%;
+  max-width: 120px;
+  height: auto;
+}
+/* este comando de @media, aprendi pelo chat que é uma regra condicional que aplica estilos diferentes, de acordo com o tamanho da tela, uma das principais ferramentas de responsividade. */
+@media (max-width: 768px) { 
+  .layout-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo,
+  .ash {
+    width: 30%;
+  }
 }
